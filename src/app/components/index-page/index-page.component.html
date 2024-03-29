@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Design</title>
+</head>
+
+<body>
+    @if(Allusersdata) {
+        <div class="container">
+            <div class="basket">
+                <div id="carouselExample" class="carousel slide containner">
+                    <div class="carousel-inner bg-black">
+                        <div *ngFor="let user of Allusersdata; let isFirst = first" [class.carousel-item]="true" [class.active]="isFirst">
+                            <a routerLink="user/{{user.id}}">
+                                <div class="card cardcontainer">
+                                    <img [src]="user.avatar" class="card-img-top image" [alt]="'id:/' + user.id" class="image">
+                                    <div class="card-body">
+                                        <p class="card-text"><span>User Name : {{user.first_name}} {{user.last_name}}</span></p>
+                                        <p class="card-text"><span>User ID : {{user.id}}</span></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon arrowicon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon arrowicon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+    @else() {
+        <div class="d-flex justify-content-center loadingbasket">
+            <div class="spinner-border" role="status"></div>
+            <div> <h3>Loading...</h3></div>
+        </div>
+    }
+</body>
+</html>
+
+
+
+
+    
+      
+

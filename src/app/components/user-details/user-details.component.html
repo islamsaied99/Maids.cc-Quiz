@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Coustard:900" rel="stylesheet">
+</head>
+<body>
+    @if(user) {
+        <div class="container mt-4 mb-4 p-3 d-flex justify-content-center detailscontainer">
+             <div class="card p-4">
+                 <div class="image d-flex flex-column justify-content-center align-items-center"> 
+                     <img src="{{userAvatar}}" height="100" width="100" />
+                     <span class="name mt-3">ID: {{userdataid}}</span> 
+                     <span class="idd">Name: {{userf_name}} {{userlname}}</span> 
+                     <div class="d-flex flex-row justify-content-center align-items-center gap-2"> 
+                         <span class="idd1">Mail: {{useremail}}</span> <span><i class="fa fa-copy"></i></span> 
+                     </div>
+                     <div class="d-flex flex-row justify-content-center align-items-center mt-3"> 
+                         <a href="{{userUrl}}" class="supportlink" target="_blank">support link</a> 
+                     </div> 
+                     <div class="d-flex mt-2"></div> 
+                     <div class="text mt-3"> <span>{{usertext}}</span> </div> 
+                     <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 
+                         <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> 
+                         <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span>
+                     </div>
+                </div>
+             </div>
+        </div>
+    }
+    @else {
+        <div class="errorbody">
+            <div class="errorcontainer">
+                <div class="backg">
+                    <div class="sand"></div>
+                    <div class="tower">
+                        <div class="s1"></div>
+                        <div class="s2"></div>
+                        <div class="door1"></div>
+                        <div class="door2"></div>
+                        <div class="balcony">
+                            <div class="b1"></div>
+                            <div class="b2"></div>
+                            <div class="b3"></div>
+                            <div class="b4"></div>
+                            <div class="b5"></div>
+                            <div class="b6"></div>
+                            <div class="b7"></div>
+                            <div class="b8"></div>
+                            <div class="b9"></div>
+                        </div>
+                        <div class="s3"></div>
+                        <div class="s4"></div>
+                        <div class="dome"></div>
+                        <div class="glass"></div>
+                        <div class="s5"></div>
+                        <div class="light"></div>
+                        <div class="sand1"></div>
+                        <div class="sand2"></div>
+                    </div>
+                </div>
+                <div class="errormessage">
+                    <h6>"Sorry, there seems to be an issue. Please check your internet connection or your ID and try again."</h6>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+</html>
+
+

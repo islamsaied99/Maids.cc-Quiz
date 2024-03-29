@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary navv">
+    <div class="container-fluid cont">
+      <form class="d-flex searchbar" role="search">
+        <input class="form-control" type="number" placeholder="Search by User ID and click Enter" aria-label="Search" [(ngModel)]="ID" (keyup.enter)="searchforuser() " name="id" (keyup)="senddata($event)">
+       @if(length!=0){
+        <div  class="menu">
+
+          <div name="div" (click)="clear()" routerLink="user/{{ user.id }}" class="list" *ngFor="let user of users  ">
+           <img src="{{user.avatar}}" >
+            <a routerLink="user/{{ user.id }}" class="menuitem"(click)="clear()" >
+              {{ user.first_name }}
+            </a>
+          </div>
+          
+
+        </div>
+
+       }
+       
+      </form>
+      <button class="btn btn-primary" routerLink="/">Home</button>
+    </div>
+  </nav>
+</body>
+</html>
+
+

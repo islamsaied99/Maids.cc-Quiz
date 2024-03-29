@@ -1,0 +1,36 @@
+
+*{
+    text-decoration: none;
+}
+ .cardcontainer{
+    width: 100% !important;
+    
+
+}
+.cardcontainer .image{
+    width: 100%;
+    height: 60vh;
+    
+    
+}
+.containner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+     margin-top: 6%;
+} 
+.basket{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.arrowicon{
+    background-color: black !important;
+}
+.loadingbasket{
+    height: 100vh;
+    align-items: center;
+}
